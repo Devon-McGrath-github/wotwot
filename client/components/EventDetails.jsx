@@ -85,7 +85,7 @@ export default React.createClass({
                   shortname='unityhivekarma'
                   identifier={activity.activityId}
                   title={activity.title}
-                  url="https://test-9eee4.firebaseapp.com/" />
+                  url={"https://test-9eee4.firebaseapp.com/" + activity.activityId} />
                 </div>
               </div>
 
