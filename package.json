@@ -4,7 +4,6 @@
   "description": "WotWot personalities",
   "main": "server/server.js",
   "scripts": {
-    "dev-server": "webpack-dev-server",
     "serve": "webpack-dev-server --hot --inline",
     "build": "webpack && npm run transpile",
     "start": "node server/lib/server",
