@@ -6,7 +6,6 @@ import { uploadImages } from '../storageInit'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
 
-// require('react-datepicker/dist/react-datepicker.css');
 class CreateActivity extends Component {
     constructor(props) {
         super(props)
@@ -17,7 +16,6 @@ class CreateActivity extends Component {
         }
         this.props.updateDate(moment().format("L"))
     }
-
 
     getPhotoStatus(inProgress) {
         switch (inProgress) {
@@ -30,7 +28,7 @@ class CreateActivity extends Component {
                 return (<div>Nothing found</div>)
             default:
                  return (<div></div>)
-          }
+        }
     }
 
     handleChange(date) {
@@ -39,7 +37,6 @@ class CreateActivity extends Component {
         startDate: date
       })
     }
-
 
   render() {
     const { fields: {title, subtitle, description, activityStart, activityEnd, formattedAddress, numberRequired, tasks, uid, attendeeIds, images}, handleSubmit} = this.props
@@ -95,16 +92,15 @@ return (
           </div>
           <div className="ui hidden divider"></div>
           <div>
-              <label>Images: </label>
-              <input type="file" onChange={(e) => {
-                          e.preventDefault()
-                          this.props.uploadImageRequest(e.target.files)
-                      }
-                  } multiple />
-              {this.getPhotoStatus(inProgress)}
+            <label>Images: </label>
+            <input type="file" onChange={(e) => {
+              e.preventDefault()
+              this.props.uploadImageRequest(e.target.files)
+              }} multiple />
+            {this.getPhotoStatus(inProgress)}
           </div>
           <div className="ui hidden divider"></div>
-            <button className="ui inverted red button" type="submit">Submit</button>
+          <button className="ui inverted red button" type="submit">Submit</button>
         </form>
     </div>
     )
