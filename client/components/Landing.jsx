@@ -11,11 +11,11 @@ export default (props) => {
 
     <div className="hero-container">
       <div className="hero-header">
-        <h1 className="hero-h1">MARAK</h1>
+        <h1 className="hero-h1">WotWot</h1>
       </div>
 
       <div className="hero-description">
-        <h3 className="hero-h3"><span className="hero-desc-text">Help build your community with the gift of a little time and effort.</span></h3>
+        <h3 className="hero-h3"><span className="hero-desc-text">The Personality Hub</span></h3>
       </div>
 
       <div className="hero-button">
