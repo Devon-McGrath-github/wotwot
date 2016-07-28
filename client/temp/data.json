@@ -1,0 +1,87 @@
+{
+  "activities" : {
+    "-KMGxye2yteDAS9GdGFp" : {
+      "activityId" : 2,
+      "description" : "this is a test"
+    },
+    "-KMGy3zYPHQsroWsqiqa" : {
+      "activityId" : 2,
+      "description" : "this is a test"
+    },
+    "-KMIb0M5xA_b-0shjphx" : {
+      "description" : "hello",
+      "title" : "test"
+    },
+    "-KMIbDs03CWKyXm6qoXQ" : {
+      "description" : "gagaga",
+      "title" : "awesome"
+    },
+    "activity1" : {
+      "activityCreatorId" : 56,
+      "activityEnd" : "2016-09-27T21:30:49.782Z",
+      "activityId" : 1,
+      "activityStart" : "2016-09-27T18:30:49.782Z",
+      "attendeeIds" : {
+        "adflgk" : 1,
+        "dasuifh" : 68,
+        "difhduh" : 3,
+        "dsfjh" : 2
+      },
+      "description" : "Our local touch rugby club is having a tounament and needs eager volunteers to referee the games. No experience necessary, all training will be provided",
+      "formattedAddress" : "18 Kohimarama Rd, Kohimarama, Auckland 1071, New Zealand",
+      "images" : {
+        "url" : "localhost:8080/images/05.jpg"
+      },
+      "numberRequired" : 10,
+      "subtitle" : "Referees needed for touch rugby tournamet this weekend!!!",
+      "tasks" : "Running, refereeing",
+      "title" : "Touch Rugby Tounament"
+    },
+    "activity2" : {
+      "activityCreatorId" : 90,
+      "activityEnd" : "2016-10-27T21:30:49.782Z",
+      "activityId" : 2,
+      "activityStart" : "2016-10-27T18:30:49.782Z",
+      "attendeeIds" : {
+        "afffk" : 78,
+        "daftrh" : 89,
+        "dhytgh" : 55,
+        "diserfuh" : 78
+      },
+      "description" : "Picking up rubish to make the park awesome again",
+      "formattedAddress" : "18 Kohimarama Rd, Kohimarama, Auckland 1071, New Zealand",
+      "images" : {
+        "url" : "localhost:8080/images/05.jpg"
+      },
+      "numberRequired" : 10,
+      "subtitle" : "Clean up the Park!!",
+      "title" : "Rubbish Pick Up"
+    },
+    "activity3" : {
+      "activityCreatorId" : "WIPZdEtTBzLpNZFaZuxmYw5yc2p1",
+      "activityEnd:" : "2016-09-27T21:30:49.782Z",
+      "activityId" : 3,
+      "activityStart" : "2016-10-27T18:30:49.782Z",
+      "attendeeIds" : {
+        "asdfasdf" : 790,
+        "asdfxzxcv" : "WIPZdEtTBzLpNZFaZuxmYw5yc2p1",
+        "qewrqdfasdf" : 20,
+        "xvvqwera" : 30
+      },
+      "description" : "Delete Activity button test what the hell",
+      "formattedAddress" : "123 Fake Street",
+      "images" : {
+        "url" : "'not here yet'"
+      },
+      "numberRequired" : 33,
+      "subtitile" : "Im here to be deleted",
+      "title" : "Delete Me"
+    }
+  },
+  "users" : {
+    "2" : {
+      "email" : "email",
+      "username" : "Joshua"
+    }
+  }
+}
