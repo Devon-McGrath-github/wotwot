@@ -65,7 +65,7 @@ export default React.createClass({
                       { this.props.hasRSVPed(attendeeIds, currentUserId) ? 'Cancel RSVP' : 'RSVP' }
                       </button>
                     </div>
-                  </div>
+                </div>
               </div>
 
               <div id="descript" className="twelve wide column">
@@ -74,26 +74,27 @@ export default React.createClass({
                 </div>
               </div>
 
-                {/* EVENT DETAILS BOX */}
+              {/* EVENT DETAILS BOX */}
 
 
-                {/* EVENT Description BOX */}
+              {/* EVENT Description BOX */}
 
-                <div className="disqus-box sixteen wide column">
-                  <div id="disqus">
-                  <ReactDisqusThread
-                    shortname='unityhivekarma'
-                    identifier={activity.activityId}
-                    title={activity.title}
-                    url="https://test-9eee4.firebaseapp.com/" />
-                  </div>
+              <div className="disqus-box sixteen wide column">
+                <div id="disqus">
+                <ReactDisqusThread
+                  shortname='unityhivekarma'
+                  identifier={activity.activityId}
+                  title={activity.title}
+                  url="https://test-9eee4.firebaseapp.com/" />
                 </div>
+              </div>
 
-                <div className="sixteen wide column">
-
-                {showDelete ? <Link to='event-list'><button className="ui red button delete-button" onClick={() => { this.props.deleteActivity(currentUserId, activityCreatorId, activityId)} }>Delete Event</button></Link> : null}
-
-                </div>
+              <div className="sixteen wide column">
+                {showDelete ?
+                  <Link to='event-list'>
+                    <button className="ui red button delete-button" onClick={() => { this.props.deleteActivity(currentUserId, activityCreatorId, activityId)} }>Delete Event</button>
+                  </Link> : null}
+              </div>
             </div>
           </div>
         </div>

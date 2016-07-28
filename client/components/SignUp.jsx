@@ -5,16 +5,16 @@ export default (props) => {
     let password = null
     let username = null
   return (
-  <div>
+    <div>
       <h4>Sign Up</h4>
       <form onSubmit={(e)=> {
-              e.preventDefault()
-              props.signUp(email.value, password.value)
-          }}>
-          <input type="email" name="email" placeholder="email" ref={(input) => email = input }></input>
-          <input type="password" name="password" placeholder="password" ref={(input) => password = input }></input>
-          <input type="submit" value="Sign Up" />
+        e.preventDefault()
+        props.signUp(email.value, password.value)
+      }}>
+        <input type="email" name="email" placeholder="email" ref={(input) => email = input }></input>
+        <input type="password" name="password" placeholder="password" ref={(input) => password = input }></input>
+        <input type="submit" value="Sign Up" />
       </form>
-  </div>
-)
+    </div>
+  )
 }
