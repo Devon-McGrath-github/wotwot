@@ -81,11 +81,11 @@ export default React.createClass({
 
               <div className="disqus-box sixteen wide column">
                 <div id="disqus">
-                <ReactDisqusThread
-                  shortname='unityhivekarma'
-                  identifier={activity.activityId}
-                  title={activity.title}
-                  url={"https://test-9eee4.firebaseapp.com/" + activity.activityId} />
+                  <ReactDisqusThread
+                    shortname='wotwot'
+                    identifier={activity.activityId}
+                    title={activity.title}
+                    url={"https://wotwot-4b943.firebaseio.com" + activity.activityId} />
                 </div>
               </div>
 
