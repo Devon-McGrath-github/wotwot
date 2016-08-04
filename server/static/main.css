@@ -11,6 +11,10 @@ html, body, #app, #root-div, .hero-image{
   padding: 0;
 }
 
+.title {
+
+}
+
 /* EVENT LIST COMPONENT */
 .banner-event-list {
   height: 300px;
