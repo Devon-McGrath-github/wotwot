@@ -10,7 +10,7 @@ export default (props) => {
       <Nav />
 
       <div className="banner-event-list">
-        <div className="banner-title">Events</div>
+        <div className="banner-title">Personalities</div>
       </div>
       <div className="divider"></div>
 
