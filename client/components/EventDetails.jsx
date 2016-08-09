@@ -61,7 +61,10 @@ export default React.createClass({
                     <p><b>Number people attending: </b>
                     <br/>{this.props.length - 1 } / {activity.numberRequired} </p>
                     <div className="ui hidden divider">
-                      <button className="ui yellow button" onClick={() => { this.props.toggleRSVP(currentUserId, activityId, attendeeIds)} }>
+                      <button
+                        className="ui yellow button"
+                        onClick={() => { this.props.toggleRSVP(currentUserId, activityId, attendeeIds)}
+                      }>
                       { this.props.hasRSVPed(attendeeIds, currentUserId) ? 'Cancel RSVP' : 'RSVP' }
                       </button>
                     </div>
@@ -92,7 +95,10 @@ export default React.createClass({
               <div className="sixteen wide column">
                 {showDelete ?
                   <Link to='event-list'>
-                    <button className="ui red button delete-button" onClick={() => { this.props.deleteActivity(currentUserId, activityCreatorId, activityId)} }>Delete Event</button>
+                    <button
+                      className="ui red button delete-button"
+                      onClick={() => { this.props.deleteActivity(currentUserId, activityCreatorId, activityId)}
+                    }>Delete Event</button>
                   </Link> : null}
               </div>
             </div>
