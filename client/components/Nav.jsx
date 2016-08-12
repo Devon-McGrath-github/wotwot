@@ -17,15 +17,15 @@ export default (props) => {
             </a>
             <a className="item">
               <Link to="event-list" onClick={() => props.getActivities()}>
-                <p>Event List</p>
+                <p>Personalities</p>
               </Link>
             </a>
             <a className="item">
               {signedIn ?
                 <Link to="new-event">
-                  <p>Create Event</p>
+                  <p>Create Personality</p>
                 </Link> :
-                <a href="/login.html"><p>Create Event</p></a>
+                <a href="/login.html"><p>Create Personality</p></a>
               }
             </a>
             <a className="item">
