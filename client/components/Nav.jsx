@@ -36,11 +36,6 @@ export default (props) => {
             </a>
           </div>
         </div>
-        <div className="twelve wide stretched column">
-          <div class="ui segment">
-            <p>This is an stretched grid column. This segment will always match the tab height</p>
-          </div>
-        </div>
       </div>
     </div>
   )

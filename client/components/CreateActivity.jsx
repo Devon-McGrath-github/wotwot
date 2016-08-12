@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link, hashHistory } from 'react-router'
 import { reduxForm } from 'redux-form'
-import Nav from '../containers/NavContainer'
 import { uploadImages } from '../storageInit'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
@@ -46,7 +45,6 @@ class CreateActivity extends Component {
 
 return (
   <div>
-      <Nav />
       <div className="banner banner-create">
         <div className="banner-title">Create Your Event</div>
       </div>

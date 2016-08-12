@@ -7,8 +7,12 @@ export default React.createClass({
     return (
       <div id="root-div">
         <Nav />
-         {this.props.children}
-       </div>
-       )
+          <div className="twelve wide stretched column">
+            <div class="ui segment">
+              {this.props.children}
+            </div>
+          </div>
+      </div>
+    )
    }
  })
