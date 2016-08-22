@@ -2,9 +2,9 @@ import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
 import moment from 'moment'
 
-import CreateActivity from '../components/CreateActivity'
+import CreatePersonality from '../components/CreatePersonality'
 
-import { createActivity } from '../actions/createActivityActions'
+import { createPersonality } from '../actions/createPersonalityActions'
 import { uploadImageRequest } from '../actions/uploadImagesActions'
 
 const mapStateToProps = (state) => {
@@ -18,15 +18,15 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   const a = 0
   return {
     onSubmit: (payload) => {
-      dispatch(createActivity(payload))
+      dispatch(createPersonality(payload))
     },
     uploadImageRequest: (url) => {
       dispatch(uploadImageRequest(url))
     },
     updateDate: (date) => {
-      dispatch({type: 'redux-form/CHANGE', field: 'activityStart', value: date, touch: true, form: 'createActivityForm'})
+      dispatch({type: 'redux-form/CHANGE', field: 'activityStart', value: date, touch: true, form: 'createPersonalityForm'})
     }
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateActivity)
+export default connect(mapStateToProps, mapDispatchToProps)(CreatePersonality)

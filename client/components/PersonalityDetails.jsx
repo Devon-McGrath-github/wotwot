@@ -8,42 +8,42 @@ import hasRSVPed from '../utilities/hasRSVPed'
 
 export default React.createClass({
   propTypes: {
-    activity: React.PropTypes.object
+    personality: React.PropTypes.object
   },
 
   render () {
-    if (!this.props.activity) {
+    if (!this.props.personality) {
       return (
         <div>Loading...</div>
       )
     }
 
-    let activity = this.props.activity
+    let personality = this.props.personality
     let auth = this.props.auth
 
-    let activityId = activity ? activity.activityId : 0
+    let personalityId = personality ? personality.personalityId : 0
     let currentUserId = auth.uid
-    let attendeeIds = activity.attendeeIds
-    let activityCreatorId = activity.activityCreatorId
-    let showDelete = currentUserId === activityCreatorId
+    let attendeeIds = personality.attendeeIds
+    let personalityCreatorId = personality.personalityCreatorId
+    let showDelete = currentUserId === personalityCreatorId
 
-    let bgActivityImage = activity.images
+    let bgpersonalityImage = personality.images
     let bgBannerStyle = {
-      backgroundImage: 'url(' + bgActivityImage + ')',
+      backgroundImage: 'url(' + bgPersonalityImage + ')',
       backgroundColor: 'transparent',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
     }
 
-    if (activity) {
+    if (personality) {
       return (
         <div>
           <Nav />
 
-          <div className="banner-event-details" style={bgBannerStyle}>
-            <div className="banner-title">{activity.title}</div>
-            <h2 className="subtitle-header">{activity.subtitle}</h2>
+          <div className="banner-Personality-details" style={bgBannerStyle}>
+            <div className="banner-title">{personality.title}</div>
+            <h2 className="subtitle-header">{personality.subtitle}</h2>
           </div>
 
           <div className="ui hidden divider"></div>
@@ -51,19 +51,19 @@ export default React.createClass({
           <div className="ui container boom">
             <div className="ui stackable four column grid">
               {/* TITLE HEADER BOX */}
-              <div id="rsvp" className="event-deets four wide column">
-                <h1>Event Details</h1>
+              <div id="rsvp" className="Personality-deets four wide column">
+                <h1>Personality Details</h1>
                 <div className="content">
-                    <p><b>Location: </b>{activity.formattedAddress}</p>
-                    <p><b>Tasks: </b>{activity.tasks}</p>
-                    <p><b>Date: </b>{activity.activityStart}</p>
-                    <p><b>Time: </b>{activity.activityEnd}</p>
+                    <p><b>Location: </b>{personality.formattedAddress}</p>
+                    <p><b>Tasks: </b>{personality.tasks}</p>
+                    <p><b>Date: </b>{personality.activityStart}</p>
+                    <p><b>Time: </b>{personality.activityEnd}</p>
                     <p><b>Number people attending: </b>
-                    <br/>{this.props.length - 1 } / {activity.numberRequired} </p>
+                    <br/>{this.props.length - 1 } / {personality.numberRequired} </p>
                     <div className="ui hidden divider">
                       <button
                         className="ui yellow button"
-                        onClick={() => { this.props.toggleRSVP(currentUserId, activityId, attendeeIds)}
+                        onClick={() => { this.props.toggleRSVP(currentUserId, personalityId, attendeeIds)}
                       }>
                       { this.props.hasRSVPed(attendeeIds, currentUserId) ? 'Cancel RSVP' : 'RSVP' }
                       </button>
@@ -73,32 +73,32 @@ export default React.createClass({
 
               <div id="descript" className="twelve wide column">
                 <div className="desc-box twelve wide column">
-                  <h1 className="content description-event">Description </h1><p> {activity.description}</p>
+                  <h1 className="content description-Personality">Description </h1><p> {personality.description}</p>
                 </div>
               </div>
 
-              {/* EVENT DETAILS BOX */}
+              {/* Personality DETAILS BOX */}
 
 
-              {/* EVENT Description BOX */}
+              {/* Personality Description BOX */}
 
               <div className="disqus-box sixteen wide column">
                 <div id="disqus">
                   <ReactDisqusThread
                     shortname='wotwot'
-                    identifier={activity.activityId}
-                    title={activity.title}
-                    url={"https://wotwot-4b943.firebaseio.com" + activity.activityId} />
+                    identifier={personality.personalityId}
+                    title={personality.title}
+                    url={"https://wotwot-4b943.firebaseio.com" + personality.personalityId} />
                 </div>
               </div>
 
               <div className="sixteen wide column">
                 {showDelete ?
-                  <Link to='event-list'>
+                  <Link to='Personality-list'>
                     <button
                       className="ui red button delete-button"
-                      onClick={() => { this.props.deleteActivity(currentUserId, activityCreatorId, activityId)}
-                    }>Delete Event</button>
+                      onClick={() => { this.props.deletePersonality(currentUserId, personalityCreatorId, personalityId)}
+                    }>Delete Personality</button>
                   </Link> : null}
               </div>
             </div>

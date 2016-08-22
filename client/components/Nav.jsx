@@ -16,7 +16,7 @@ export default (props) => {
               </Link>
             </a>
             <a className="item">
-              <Link to="event-list" onClick={() => props.getActivities()}>
+              <Link to="event-list" onClick={() => props.getPersonalities()}>
                 <p>Personalities</p>
               </Link>
             </a>
