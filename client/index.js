@@ -9,20 +9,20 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
 import { toggleRSVP } from './actions/rsvpActions'
 import { listenToAuth } from './actions/authAction'
-import { deletePersonality } from './actions/deletePersonalityAction'
+import { deleteActivity } from './actions/deleteActivityAction'
 import { uploadTask } from './storageInit'
 
 import appReducer from './reducers/combineReducers'
 
 import Landing from './containers/LandingContainer'
-import PersonalityList from './containers/PersonalityListContainer'
-import CreatePersonality from './containers/CreatePersonalityContainer'
-import PersonalityDetails from './containers/PersonalityDetailsContainer'
+import EventList from './containers/EventListContainer'
+import CreateActivity from './containers/CreateActivityContainer'
+import EventDetails from './containers/EventDetailsContainer'
 import Auth from './containers/AuthContainer'
 import App from './containers/AppContainer'
 import SignUp from './containers/SignUpContainer'
 
-import {getPersonalities} from './actions/getAllPersonalitiesAction'
+import {getActivities} from './actions/getAllActivitiesAction'
 
 let store = createStore(
   appReducer, compose(
@@ -31,19 +31,19 @@ let store = createStore(
   ))
 
 // initial load of data while landing page is displayed
-store.dispatch(getPersonalities())
+store.dispatch(getActivities())
 
 const history = syncHistoryWithStore(hashHistory, store)
 
-document.addPersonalityListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={Landing} />
-          <Route path='personality-list' component={PersonalityList}/>
-          <Route path='personality-details/:id' component={PersonalityDetails} />
-          <Route path='new-personality' component={CreatePersonality} />
+          <Route path='event-list' component={EventList}/>
+          <Route path='event-details/:id' component={EventDetails} />
+          <Route path='new-event' component={CreateActivity} />
           <Route path='auth' component={Auth} />
           <Route path='sign-up' component={SignUp} />
         </Route>

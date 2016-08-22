@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import Nav from '../components/Nav'
-import { getPersonalities } from '../actions/getAllPersonalitiesAction'
+import { getActivities } from '../actions/getAllActivitiesAction'
 import { logoutUser } from '../actions/authAction'
 
 const mapStateToProps = (state) => {
@@ -12,8 +12,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getPersonalities: () => {
-      dispatch(getPersonalities())
+    getActivities: () => {
+      dispatch(getActivities())
     },
       logoutUser: () => {
         dispatch(logoutUser())

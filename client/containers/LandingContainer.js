@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Landing from '../components/Landing'
-import { getPersonalities } from '../actions/getAllPersonalitiesAction'
+import { getActivities } from '../actions/getAllActivitiesAction'
 
 const mapStateToProps = (state) => {
   return {
@@ -10,8 +10,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getPersonalities: () => {
-      dispatch(getPersonalities())
+    getActivities: () => {
+      dispatch(getActivities())
     }
   }
 }

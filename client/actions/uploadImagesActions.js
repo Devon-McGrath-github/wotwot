@@ -7,11 +7,21 @@ export const uploadImageRequest = (targetFile) => {
   return (dispatch) => {
     dispatch(imageUploadInProgress())
     uploadImages(targetFile, (url) => {
-      dispatch({ type: 'redux-form/BLUR', field: "images", value: url, touch: true, form: 'createPersonalityForm'})
+      dispatch({ type: 'redux-form/BLUR', field: "images", value: url, touch: true, form: 'createActivityForm'})
       dispatch(imageUploadSuccess())
     })
   }
 }
+
+// export const getActivities = () => {
+//   return (dispatch) => {
+//     getActivitiesFromDB((activities) => {
+//       dispatch(receiveActivities(activities))
+//     })
+//   }
+// }
+
+
 
 export const imageUploadInProgress = () => {
   return {

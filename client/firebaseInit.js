@@ -4,15 +4,15 @@ import R from 'ramda'
 import { db, auth } from './dbInit'
 import getAttendeeKey from './utilities/getAttendeeKey'
 
-export const getPersonalitiesFromDB = (callback) => {
-  db.ref('personalities/').on('value', (snapshot) => {
+export const getActivitiesFromDB = (callback) => {
+  db.ref('activities/').on('value', (snapshot) => {
     callback(R.values(snapshot.val()))
   })
 }
 
-export const writeNewPersonalityToDB = (payload) => {
-  const newPersonalityKey = firebase.database().ref().child('personalities/').push().key
-  const newPersonality = {
+export const writeNewActivityToDB = (payload) => {
+  const newActivityKey = firebase.database().ref().child('activities/').push().key
+  const newActivity = {
     title: payload.title,
     subtitle: payload.subtitle,
     description: payload.description,
@@ -21,35 +21,35 @@ export const writeNewPersonalityToDB = (payload) => {
     formattedAddress: payload.formattedAddress,
     numberRequired: payload.numberRequired,
     tasks: payload.tasks,
-    personalityId: newPersonalityKey,
-    personalityCreatorId: payload.uid,
+    activityId: newActivityKey,
+    activityCreatorId: payload.uid,
     images: payload.images,
     attendeeIds: payload.attendeeIds
   }
   const updates = {};
-  updates['personalities/' + newPersonalityKey] = newPersonality;
+  updates['activities/' + newActivityKey] = newActivity;
   return firebase.database().ref().update(updates)
 }
 
-export const deletePersonalityFromDB = (personality) => {
+export const deleteActivityFromDB = (activity) => {
   return firebase
     .database()
-    .ref(`personalities/${personality.personalityId}`)
+    .ref(`activities/${activity.activityId}`)
     .remove()
 }
 
-export const addAttendeeIdToDB = (personality) => {
+export const addAttendeeIdToDB = (activity) => {
   return  firebase
     .database()
-    .ref(`personalities/${personality.personalityId}`)
+    .ref(`activities/${activity.activityId}`)
     .child('attendeeIds')
-    .push(personality.attendeeId)
+    .push(activity.attendeeId)
 }
 
-export const removeAttendeeId = (personality) => {
-  const attendeeKey = getAttendeeKey(personality)
+export const removeAttendeeId = (activity) => {
+  const attendeeKey = getAttendeeKey(activity)
   return firebase
     .database()
-    .ref(`personalities/${personality.personalityId}/attendeeIds/${attendeeKey}`)
+    .ref(`activities/${activity.activityId}/attendeeIds/${attendeeKey}`)
     .remove()
 }

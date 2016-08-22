@@ -1,4 +1,4 @@
-import { getPersonalities } from './getAllPersonalitiesAction'
+import { getActivities } from './getAllActivitiesAction'
 import { addAttendeeIdToDB, removeAttendeeId } from '../firebaseInit'
 import hasRSVPed from '../utilities/hasRSVPed'
 
@@ -6,41 +6,41 @@ export const ADD_RSVP = 'ADD_RSVP'
 export const CANCEL_RSVP = 'CANCEL_RSVP'
 
 // TODO: reduce duplication of arguments
-const addAttendeeRequest = (attendeeId, personalityId, attendeeIds) => {
+const addAttendeeRequest = (attendeeId, activityId, attendeeIds) => {
   return (dispatch) => {
     dispatch({
       type: ADD_RSVP,
       attendeeId: attendeeId,
-      personalityId: personalityId,
+      activityId: activityId,
       attendeeIds: attendeeIds
     })
-    addAttendeeIdToDB({attendeeId, personalityId, attendeeIds})
+    addAttendeeIdToDB({attendeeId, activityId, attendeeIds})
       .then((result) => {
-        dispatch(getPersonalities())
+        dispatch(getActivities())
       })
   }
 }
 
-const removeAttendeeRequest = (attendeeId, personalityId, attendeeIds) => {
+const removeAttendeeRequest = (attendeeId, activityId, attendeeIds) => {
   return (dispatch) => {
     dispatch({
       type: CANCEL_RSVP,
       attendeeId: attendeeId,
-      personalityId: personalityId,
+      activityId: activityId,
       attendeeIds: attendeeIds
     })
-    removeAttendeeId({attendeeId, personalityId, attendeeIds})
+    removeAttendeeId({attendeeId, activityId, attendeeIds})
       .then((result) => {
-        dispatch(getPersonalities())
+        dispatch(getActivities())
       })
   }
 }
 
-export const toggleRSVP = (attendeeId, personalityId, attendeeIds) => {
+export const toggleRSVP = (attendeeId, activityId, attendeeIds) => {
 
   if (hasRSVPed(attendeeIds, attendeeId)) {
-    return removeAttendeeRequest(attendeeId, personalityId, attendeeIds)
+    return removeAttendeeRequest(attendeeId, activityId, attendeeIds)
   } else {
-    return addAttendeeRequest(attendeeId, personalityId, attendeeIds)
+    return addAttendeeRequest(attendeeId, activityId, attendeeIds)
   }
 }

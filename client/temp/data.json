@@ -1,11 +1,11 @@
 {
-  "personalities" : {
+  "activities" : {
     "-KMGxye2yteDAS9GdGFp" : {
-      "personalityId" : 2,
+      "activityId" : 2,
       "description" : "this is a test"
     },
     "-KMGy3zYPHQsroWsqiqa" : {
-      "personalityId" : 2,
+      "activityId" : 2,
       "description" : "this is a test"
     },
     "-KMIb0M5xA_b-0shjphx" : {
@@ -16,11 +16,11 @@
       "description" : "gagaga",
       "title" : "awesome"
     },
-    "personality1" : {
-      "personalityCreatorId" : 56,
-      "personalityEnd" : "2016-09-27T21:30:49.782Z",
-      "personalityId" : 1,
-      "personalityStart" : "2016-09-27T18:30:49.782Z",
+    "activity1" : {
+      "activityCreatorId" : 56,
+      "activityEnd" : "2016-09-27T21:30:49.782Z",
+      "activityId" : 1,
+      "activityStart" : "2016-09-27T18:30:49.782Z",
       "attendeeIds" : {
         "adflgk" : 1,
         "dasuifh" : 68,
@@ -37,11 +37,11 @@
       "tasks" : "Running, refereeing",
       "title" : "Touch Rugby Tounament"
     },
-    "personality2" : {
-      "personalityCreatorId" : 90,
-      "personalityEnd" : "2016-10-27T21:30:49.782Z",
-      "personalityId" : 2,
-      "personalityStart" : "2016-10-27T18:30:49.782Z",
+    "activity2" : {
+      "activityCreatorId" : 90,
+      "activityEnd" : "2016-10-27T21:30:49.782Z",
+      "activityId" : 2,
+      "activityStart" : "2016-10-27T18:30:49.782Z",
       "attendeeIds" : {
         "afffk" : 78,
         "daftrh" : 89,
@@ -57,18 +57,18 @@
       "subtitle" : "Clean up the Park!!",
       "title" : "Rubbish Pick Up"
     },
-    "personality3" : {
-      "personalityCreatorId" : "WIPZdEtTBzLpNZFaZuxmYw5yc2p1",
-      "personalityEnd:" : "2016-09-27T21:30:49.782Z",
-      "personalityId" : 3,
-      "personalityStart" : "2016-10-27T18:30:49.782Z",
+    "activity3" : {
+      "activityCreatorId" : "WIPZdEtTBzLpNZFaZuxmYw5yc2p1",
+      "activityEnd:" : "2016-09-27T21:30:49.782Z",
+      "activityId" : 3,
+      "activityStart" : "2016-10-27T18:30:49.782Z",
       "attendeeIds" : {
         "asdfasdf" : 790,
         "asdfxzxcv" : "WIPZdEtTBzLpNZFaZuxmYw5yc2p1",
         "qewrqdfasdf" : 20,
         "xvvqwera" : 30
       },
-      "description" : "Delete personality button test what the hell",
+      "description" : "Delete Activity button test what the hell",
       "formattedAddress" : "123 Fake Street",
       "images" : {
         "url" : "'not here yet'"

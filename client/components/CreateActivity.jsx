@@ -5,7 +5,7 @@ import { uploadImages } from '../storageInit'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
 
-class CreatePersonality extends Component {
+class CreateActivity extends Component {
     constructor(props) {
         super(props)
         this.getPhotoStatus = this.getPhotoStatus.bind(this)
@@ -46,12 +46,12 @@ class CreatePersonality extends Component {
 return (
   <div>
       <div className="banner banner-create">
-        <div className="banner-title">Create A Personality</div>
+        <div className="banner-title">Create Your Event</div>
       </div>
         <div className="ui hidden divider"></div>
         <form className="ui form container" onSubmit={() => {
             handleSubmit()
-            hashHistory.push('Personality-list')}}>
+            hashHistory.push('event-list')}}>
           <div className="two fields">
             <div className="field">
               <label>Title: </label>
@@ -73,7 +73,7 @@ return (
               selected={this.state.startDate} onChange={this.handleChange} />
           </div>
           <div>
-            <label>Personality Time: </label>
+            <label>Event Time: </label>
             <input type="time" placeholder="activity end" {...activityEnd}/>
           </div>
           <div className="field">
@@ -92,7 +92,7 @@ return (
           <div>
             <label>Images: </label>
             <input type="file" onChange={(e) => {
-              e.prPersonalityDefault()
+              e.preventDefault()
               this.props.uploadImageRequest(e.target.files)
               }} multiple />
             {this.getPhotoStatus(inProgress)}
@@ -105,10 +105,10 @@ return (
   }
 }
 
-CreatePersonality = reduxForm({
-  form: 'createPersonalityForm',
+CreateActivity = reduxForm({
+  form: 'createActivityForm',
   fields: ['title', 'subtitle','description', 'activityStart', 'activityEnd', 'formattedAddress', 'numberRequired', 'tasks', 'uid','attendeeIds', 'images'], initialValues: {uid: '1'}
 
-})(CreatePersonality)
+})(CreateActivity)
 
-export default CreatePersonality
+export default CreateActivity

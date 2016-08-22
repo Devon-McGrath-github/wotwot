@@ -2,14 +2,14 @@ import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
 import { reducer as formReducer } from 'redux-form'
 
-import personalities from './getAllPersonalitiesReducer'
+import activities from './getAllActivitesReducer'
 import auth from './authReducer'
 import imageUpload from './imageUploadReducer'
 
 const reducers = {
   routing: routerReducer,
   form: formReducer,
-  personalities: personalities,
+  activities: activities,
   auth: auth,
   imageUpload: imageUpload
 }

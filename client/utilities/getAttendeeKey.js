@@ -1,8 +1,8 @@
-export default (personality) => {
-  const ids = personality.attendeeIds
+export default (activity) => {
+  const ids = activity.attendeeIds
   let attendeeKey = null
   Object.keys(ids).forEach((key) => {
-    if(ids[key] === personality.attendeeId) {
+    if(ids[key] === activity.attendeeId) {
       attendeeKey = key
     }
   })
