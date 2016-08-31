@@ -5,7 +5,10 @@ import Auth from '../containers/AuthContainer'
 export default (props) => {
   let signedIn = props.auth.uid
   return (
-  <div className="hero-image">
-  </div>
+    <div class="twelve wide stretched column">
+     <div class="ui segment">
+       <p>teste</p>
+     </div>
+   </div>
   )
 }

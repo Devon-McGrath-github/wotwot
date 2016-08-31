@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <Provider store={store}>
       <Router history={history}>
         <Route path="/" component={App}>
-          <IndexRoute component={Landing} />
           <Route path='event-list' component={EventList}/>
           <Route path='event-details/:id' component={EventDetails} />
           <Route path='new-event' component={CreateActivity} />

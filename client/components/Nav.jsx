@@ -7,10 +7,9 @@ export default (props) => {
 
   return (
     <div>
-      <div className="ui grid">
         <div className="four wide column">
           <div className="ui vertical fluid tabular menu">
-            <a className="item active">
+            <a className="item">
               <Link to='/'>
                 <p>WotWot</p>
               </Link>
@@ -36,7 +35,11 @@ export default (props) => {
             </a>
           </div>
         </div>
-      </div>
+        <div class="twelve wide stretched column">
+         <div class="ui segment">
+           <p>in nav testerino</p>
+         </div>
+       </div>
     </div>
   )
 }

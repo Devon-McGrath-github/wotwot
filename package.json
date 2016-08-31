@@ -8,24 +8,8 @@
     "build": "webpack && npm run transpile",
     "start": "node server/lib/server",
     "server": "node-inspector --web-port 8888 & npm run transpile && node-dev --debug server/lib/server",
-    "test": "ava --watch",
     "watch": "webpack --watch",
-    "transpile": "babel server --ignore server/lib,server/static --out-dir server/lib",
-    "login": "firebase login",
-    "FB:init": "firebase init",
-    "deploy": "firebase deploy",
-    "open": "firebase open",
-    "FB:serve": "firebase serve",
-    "logout": "firebase logout"
-  },
-  "ava": {
-    "failfast": true,
-    "tap": true,
-    "require": [
-      "babel-register",
-      "./test/helpers/setup-browser-env.js"
-    ],
-    "babel": "inherit"
+    "transpile": "babel server --ignore server/lib,server/static --out-dir server/lib"
   },
   "babel": {
     "presets": [
@@ -43,7 +27,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "ava": "^0.15.2",
     "enzyme": "^2.3.0",
     "json-loader": "^0.5.4",
     "node-dev": "^3.1.3",
@@ -78,7 +61,6 @@
     "redux-form": "^5.3.1",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.1.0",
-    "semantic-ui": "^2.2.2",
     "superagent": "^2.0.0",
     "webpack": "^1.13.1"
   }
